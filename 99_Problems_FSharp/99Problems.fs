@@ -6,5 +6,9 @@ let myLast l =
     | [] -> None
     | _ -> l |> List.rev |> List.head |> Some
 
-
+let rec myLast' l =
+    match l with
+    | [] -> None
+    | [x] -> Some x
+    | (x::xs) -> myLast' xs
 
