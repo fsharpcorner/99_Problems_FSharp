@@ -22,5 +22,5 @@ let rec myButLast l=
 let rec elementAt l n =
     match l, n with
     | [], _ -> None
-    | (x::xs), 1 -> Some x
-    | (x::xs), n -> elementAt xs (n-1)
+    | (x::_), 1 -> Some x
+    | (_::xs), n -> elementAt xs (n-1)
