@@ -41,3 +41,11 @@ let elementAt_2() =
 [<Test>]
 let elementAt_3() =
     elementAt [1;3;5] 2 |> should equal (Some 3)
+
+[<Test>]
+let myLength_1() =
+    myLength [] |> should equal 0
+
+[<Test>]
+let myLength_2() =
+    myLength [1;2;3;4;5] |> should equal 5

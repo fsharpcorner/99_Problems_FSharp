@@ -24,3 +24,11 @@ let rec elementAt l n =
     | [], _ -> None
     | (x::_), 1 -> Some x
     | (_::xs), n -> elementAt xs (n-1)
+
+let myLength l =
+    let rec myLengthImpl l n =
+        match l with
+        | [] -> 0
+        | [_] -> n + 1 
+        | (_::xs) -> myLengthImpl xs (n+1)
+    myLengthImpl l 0
