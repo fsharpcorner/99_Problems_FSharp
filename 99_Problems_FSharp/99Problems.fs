@@ -12,3 +12,9 @@ let rec myLast' l =
     | [x] -> Some x
     | (x::xs) -> myLast' xs
 
+let rec myButLast l=
+  match l with
+    | [] -> None
+    | [x] -> None
+    | [x;xs] -> Some x
+    | (x::xs) -> myButLast xs
