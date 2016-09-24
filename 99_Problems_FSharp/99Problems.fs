@@ -32,3 +32,10 @@ let myLength l =
         | [_] -> n + 1 
         | (_::xs) -> myLengthImpl xs (n+1)
     myLengthImpl l 0
+
+let myReverse l =
+    let rec myReverseImpl l nl =
+        match l with
+        | [] -> nl
+        |  (x::xs) -> myReverseImpl xs (x::nl)
+    myReverseImpl l []

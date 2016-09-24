@@ -49,3 +49,8 @@ let myLength_1() =
 [<Test>]
 let myLength_2() =
     myLength [1;2;3;4;5] |> should equal 5
+
+[<Test>]
+let myReverse_1() =
+    myReverse [1;2;3;4;5] |> should equal [5;4;3;2;1]
+
