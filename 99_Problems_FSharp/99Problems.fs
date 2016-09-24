@@ -18,3 +18,9 @@ let rec myButLast l=
     | [x] -> None
     | [x;xs] -> Some x
     | (x::xs) -> myButLast xs
+
+let rec elementAt l n =
+    match l, n with
+    | [], _ -> None
+    | (x::xs), 1 -> Some x
+    | (x::xs), n -> elementAt xs (n-1)
