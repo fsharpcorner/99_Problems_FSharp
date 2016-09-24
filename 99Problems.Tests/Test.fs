@@ -54,3 +54,11 @@ let myLength_2() =
 let myReverse_1() =
     myReverse [1;2;3;4;5] |> should equal [5;4;3;2;1]
 
+[<Test>]
+let isPalindrome_1() =
+    isPalindrome "mac" |> should equal false
+
+[<Test>]
+let isPalindrome_2() =
+    isPalindrome "laval" |> should equal true
+

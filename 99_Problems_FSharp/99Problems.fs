@@ -39,3 +39,6 @@ let myReverse l =
         | [] -> nl
         |  (x::xs) -> myReverseImpl xs (x::nl)
     myReverseImpl l []
+
+let isPalindrome (w:string) =
+    w.ToCharArray() = (w.ToCharArray() |> Array.rev)
